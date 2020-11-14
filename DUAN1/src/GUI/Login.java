@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import UNTIL.xImage;
 import java.awt.Color;
 
 /**
@@ -19,6 +20,7 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         setLocationRelativeTo(null);
+        init();
     }
 
     /**
@@ -33,19 +35,20 @@ public class Login extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        txtPassword = new javax.swing.JTextField();
+        txtID_NhanVien = new javax.swing.JTextField();
         jCheckBox1 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        btnLogin = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cinema Login");
@@ -65,8 +68,8 @@ public class Login extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Don't have an Cinema account?");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 273, -1, -1));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 300, -1));
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 300, -1));
+        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 300, -1));
+        jPanel2.add(txtID_NhanVien, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 300, -1));
 
         jCheckBox1.setBackground(new java.awt.Color(42, 46, 51));
         jCheckBox1.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
@@ -106,18 +109,18 @@ public class Login extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Cinema Login");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 7, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Yu Gothic UI", 1, 12)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Need help with sign in?");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 243, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(42, 46, 51));
-        jButton3.setFont(new java.awt.Font("Yu Gothic UI", 0, 11)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("LOGIN");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 140, -1));
+        btnLogin.setBackground(new java.awt.Color(42, 46, 51));
+        btnLogin.setFont(new java.awt.Font("Yu Gothic UI", 0, 11)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnLogin.setText("LOGIN");
+        jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 140, -1));
 
         jButton4.setBackground(new java.awt.Color(42, 46, 51));
         jButton4.setFont(new java.awt.Font("Yu Gothic UI", 0, 11)); // NOI18N
@@ -153,6 +156,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, -1, 20));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/HINH/logo.png"))); // NOI18N
+        jLabel8.setText("jLabel8");
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 135, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -240,9 +247,9 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLogin;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
@@ -252,10 +259,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField txtID_NhanVien;
+    private javax.swing.JTextField txtPassword;
     // End of variables declaration//GEN-END:variables
-    
+    public void init(){
+        this.setIconImage(xImage.getAppIcon());
+    }
 }
